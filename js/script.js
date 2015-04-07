@@ -7,6 +7,7 @@ $(document).ready(function() {
 		qnum = 1; // RESET CURRENT QUESTION NUMBER
 		index = qnum - 1;
 
+		$(".theAnswerSpace").css('background-image', 'url("' + backgrounds[0] + '")');
 
 	// RESET ANSWERS
 		$("ul#answers").empty();
@@ -40,7 +41,7 @@ $(document).ready(function() {
 
 // DEFINE 10-BACKGROUND ARRAY
 	var backgrounds = [];
-	backgrounds[0] = "images/ny.png";
+	backgrounds[0] = "images/NY.png";
 	backgrounds[1] = "images/PHL.jpg";
 	backgrounds[2] = "images/LHR.jpg";
 	backgrounds[3] = "images/MSY.jpeg";

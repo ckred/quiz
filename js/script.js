@@ -7,7 +7,7 @@ $(document).ready(function() {
 		qnum = 1; // RESET CURRENT QUESTION NUMBER
 		index = qnum - 1;
 
-		$(".theAnswerSpace").css('background-image', 'url("' + backgrounds[index] + '")');
+		$(".theAnswerSpace").css('background-image', 'url("images/ny.jpg")');
 
 	// RESET ANSWERS
 		$("ul#answers").empty();

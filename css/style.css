@@ -1,0 +1,168 @@
+/*---------------------------------------------------------------------------------
+   Common Styles
+---------------------------------------------------------------------------------*/
+/*float styles*/
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/* border: solid red 1px	; */
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	background-color: #394264;
+}
+
+body {
+	font-family: 'Oxygen', sans-serif;
+	color: white;
+	text-align: center;
+	min-width: 35rem;
+}
+
+.fader {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.4);
+	z-index:10;
+}
+
+.introBox {
+	position: absolute;
+	top: 30%
+	left: 30%;
+	width: 50rem;
+	height: 20rem;
+	background-color: #ECD078;
+	color: #542437;
+	font-weight: 700;
+	font-size: 2.2rem;
+	padding: 1.3rem;
+	padding-top: 5rem;
+	border-radius: 1.5rem;
+	margin: 20%;
+	z-index: 20;
+	text-align: center;
+}
+
+.introButton {
+	position: relative;
+	height: 3rem;
+	width: 15rem;;
+	margin: 2rem 17rem;
+	text-align: center;
+	background-color: #D95B43;
+	color: white;
+	border-radius: 6px;
+}
+
+.introButton:hover {
+	cursor: pointer;
+	background-color: #53777A;
+}
+
+.theHeadSpace {
+	background-color: #53777A;
+	height: 7rem;
+}
+
+.theQuestionSpace {
+	background-color: #c02942;
+	height: 9rem;
+}
+
+h1 {
+	font-family: 'Oxygen', sans-serif;
+	font-size: 3rem;
+	position: relative;
+	top: 30%;
+}
+
+.question {
+	font-size: 2rem;
+	width: 90%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.theAnswerSpace {
+	background: url("../images/ny.png");
+	background-position: center;
+	height: 24rem;
+}
+
+.theAnswers {
+	list-style: none;
+	display: inline-block;
+}
+
+.answerBox {
+	width: 38rem;
+	position: relative;
+	top: 5%;
+	margin: auto;
+	padding: 0;
+}
+
+.answer {
+	height: 9rem;
+	width: 16rem;
+	margin: 0.5rem;
+	background-color: rgba(217,91,67,0.85);
+	float: left;
+	border-radius: 0.7rem;
+}
+
+.answer:hover {
+	cursor: pointer;
+	border-color: #ECD078;
+	background-color: rgba(236,208,120,0.85);
+}
+
+#correct {
+	background-color: rgba(217,91,67,0.85);
+}
+
+#correct:hover {
+	cursor: pointer;
+	border-color: #ECD078;
+	background-color: rgba(236,208,120,0.85);
+}
+
+#answerText {
+	position: relative;
+	font-size: 2rem;
+	top: 20%;
+}
+
+.theFooterSpace {
+	height: 1.8rem;
+	background-color: #542437;
+}
+
+#count {
+	font-size: 1.3rem;
+	float: left;
+	margin-left: 0.3rem;
+}
+
+#score {
+	font-size: 1.3rem;
+	float: right;
+	margin-right: 0.3rem;
+}

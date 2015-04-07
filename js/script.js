@@ -1,56 +1,11 @@
 $(document).ready(function() {
 
-	$(document.body).on("click","#start", function() {
-		$(".fader").fadeOut(300);
-
-		score = 0; // RESET SCORE
-		qnum = 1; // RESET CURRENT QUESTION NUMBER
-		index = qnum - 1;
-
-		$(".theAnswerSpace").css('background-image', 'url("' + backgrounds[0] + '")');
-
-	// RESET ANSWERS
-		$("ul#answers").empty();
-
-	// ASK 1st QUESTION
-		$(".question").text(questions[0]);
-
-	// ENTER 1st ANSWER CHOICES
-		newCorrectAnswer(answers[index]);
-		for(var i = 1; i < 4; i++){
-			newAnswer(herrings[3*qnum-i]);
-		}
-
-	// SHUFFLE ANSWERS
-		var ul = document.querySelector('ul');
-		for (var i = ul.children.length; i >= 0; i--) {
-		    ul.appendChild(ul.children[Math.random() * i | 0]);
-		}
-
-		$('#count span').text("Question " + qnum + " out of 10");
-		$('#score span').text("Score: " + score + " / " + index);
-	});
-
-
 	var score = 0; // RESET SCORE
 	var qnum = 1; // RESET CURRENT QUESTION NUMBER
 	var index = qnum - 1;
 
 	$('#count span').text("Question " + qnum + " out of 10");
 	$('#score span').text("Score: " + score + " / " + index);
-
-// DEFINE 10-BACKGROUND ARRAY
-	var backgrounds = [];
-	backgrounds[0] = "images/NY.png";
-	backgrounds[1] = "images/PHL.jpg";
-	backgrounds[2] = "images/LHR.jpg";
-	backgrounds[3] = "images/MSY.jpeg";
-	backgrounds[4] = "images/SYD.jpg";
-	backgrounds[5] = "images/SFO.jpg";
-	backgrounds[6] = "images/VEN.jpg";
-	backgrounds[7] = "images/CDG.jpg";
-	backgrounds[8] = "images/CLN.jpg";
-	backgrounds[9] = "images/DUB.jpg";
 
 
 // DEFINE 10-QUESTION ARRAY
@@ -112,22 +67,50 @@ $(document).ready(function() {
 	herrings[28] = "River Swilly";
 	herrings[29] = "Water of Leith";
 
-/*
-// ASK 1st QUESTION
-	$(".question").text(questions[0]);
+// DEFINE 10-BACKGROUND ARRAY
+	var backgrounds = [];
+	backgrounds[0] = "images/NY.png";
+	backgrounds[1] = "images/PHL.jpg";
+	backgrounds[2] = "images/LHR.jpg";
+	backgrounds[3] = "images/MSY.jpeg";
+	backgrounds[4] = "images/SYD.jpg";
+	backgrounds[5] = "images/SFO.jpg";
+	backgrounds[6] = "images/VEN.jpg";
+	backgrounds[7] = "images/CDG.jpg";
+	backgrounds[8] = "images/CLN.jpg";
+	backgrounds[9] = "images/DUB.jpg";
 
-// ENTER 1st ANSWER CHOICES
-	newCorrectAnswer(answers[index]);
-	for(var i = 1; i < 4; i++){
-		newAnswer(herrings[3*qnum-i]);
-	}
+// WHEN USER CLICKS PLAY
+	$(document.body).on("click","#start", function() {
+		$(".fader").fadeOut(300);
 
-// SHUFFLE ANSWERS
-	var ul = document.querySelector('ul');
-	for (var i = ul.children.length; i >= 0; i--) {
-	    ul.appendChild(ul.children[Math.random() * i | 0]);
-	}
-*/
+		score = 0; // RESET SCORE
+		qnum = 1; // RESET CURRENT QUESTION NUMBER
+		index = qnum - 1;
+
+		$(".theAnswerSpace").css('background-image', 'url("' + backgrounds[0] + '")');
+
+	// RESET ANSWERS
+		$("ul#answers").empty();
+
+	// ASK 1st QUESTION
+		$(".question").text(questions[0]);
+
+	// ENTER 1st ANSWER CHOICES
+		newCorrectAnswer(answers[index]);
+		for(var i = 1; i < 4; i++){
+			newAnswer(herrings[3*qnum-i]);
+		}
+
+	// SHUFFLE ANSWERS
+		var ul = document.querySelector('ul');
+		for (var i = ul.children.length; i >= 0; i--) {
+		    ul.appendChild(ul.children[Math.random() * i | 0]);
+		}
+
+		$('#count span').text("Question " + qnum + " out of 10");
+		$('#score span').text("Score: " + score + " / " + index);
+	});
 
 // WHEN AN ANSWER IS CLICKED:
 	$(document.body).on("click",".answer", function() {

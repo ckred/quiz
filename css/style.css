@@ -81,6 +81,7 @@ body {
 .theQuestionSpace {
 	background-color: #c02942;
 	height: 9rem;
+	width: 100%;
 }
 
 h1 {
@@ -92,7 +93,7 @@ h1 {
 
 .question {
 	font-size: 2rem;
-	width: 90%;
+	width: 100%;
     margin: auto;
     padding-top: 2rem;
 }

@@ -176,7 +176,7 @@ $(document).ready(function() {
 
 var newCorrectAnswer = function(answerText){
 	$('#answers').append(
-		$('<li>').attr({class:'answer', id:'correct'}).append(
+		$('<li>').attr({class:'answer', id:'correct', onclick:''}).append(
 			$('<span>').attr('id','answerText').append(answerText)
 		)
 	);
@@ -184,7 +184,7 @@ var newCorrectAnswer = function(answerText){
 
 var newAnswer = function(answerText){
 	$('#answers').append(
-		$('<li>').attr({class:'answer'}).append(
+		$('<li>').attr({class:'answer', onclick:''}).append(
 			$('<span>').attr('id','answerText').append(answerText)
 		)
 	);

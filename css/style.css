@@ -41,9 +41,8 @@ body {
 }
 
 .introBox {
-	position: absolute;
-	top: 30%
-	left: 30%;
+	margin: auto;
+	margin-top: 18rem;
 	width: 50rem;
 	height: 20rem;
 	background-color: #ECD078;
@@ -53,7 +52,6 @@ body {
 	padding: 1.3rem;
 	padding-top: 5rem;
 	border-radius: 1.5rem;
-	margin: 20%;
 	z-index: 20;
 	text-align: center;
 }
@@ -77,6 +75,7 @@ body {
 .theHeadSpace {
 	background-color: #53777A;
 	height: 7rem;
+	min-width: 40rem;
 }
 
 .theQuestionSpace {
